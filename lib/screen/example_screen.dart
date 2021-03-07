@@ -17,48 +17,92 @@ class _ExampleScreenState extends State<ExampleScreen> {
             "Example Screen",
           ),
         ),
-        body: Center(
+        body: Container(
           child: Column(
             children: [
-              Row(
-                children: [
-                  Container(
-                    width: 130,
-                    height: 150,
-                    color: Colors.redAccent,
-                  ),
-                  Container(
-                    width: 150,
-                    height: 150,
-                    color: Colors.amberAccent,
-                    child: Image.asset('assets/images/cat.jpg'),
-                  ),
-                  Container(
-                    width: 130,
-                    height: 150,
-                    color: Colors.redAccent,
-                  ),
-                ],
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Button"),
+                    PopupMenuButton(
+                      itemBuilder: (BuildContext context) {
+                        return [
+                          PopupMenuItem(
+                            child: Text("Wifi"),
+                          ),
+                          PopupMenuItem(
+                            child: Text("Bluetooth"),
+                          )
+                        ];
+                      },
+                    ),
+                  ],
+                ),
               ),
-              Row(
-                children: [
-                  Container(
-                    width: 130,
-                    height: 150,
-                    color: Colors.redAccent,
-                  ),
-                  Container(
-                    width: 150,
-                    height: 150,
-                    color: Colors.amberAccent,
-                    child: Image.asset('assets/images/cat.jpg'),
-                  ),
-                  Container(
-                    width: 130,
-                    height: 150,
-                    color: Colors.redAccent,
-                  ),
-                ],
+              Container(
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        color: Colors.pink[200],
+                        width: 150,
+                        height: 150,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Bla Bla"),
+                            Icon(Icons.pivot_table_chart)
+                          ],
+                        ),
+                      ),
+                      Container(
+                        color: Colors.blue[200],
+                        width: 150,
+                        height: 150,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Bla Bla"),
+                            Icon(Icons.pivot_table_chart),
+                          ],
+                        ),
+                      ),
+                    ]),
+              ),
+              Container(
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        color: Colors.pink[200],
+                        width: 150,
+                        height: 150,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Bla Bla"),
+                            Icon(Icons.pivot_table_chart)
+                          ],
+                        ),
+                      ),
+                      Container(
+                        color: Colors.blue[200],
+                        width: 150,
+                        height: 150,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Bla Bla"),
+                            Icon(Icons.pivot_table_chart),
+                          ],
+                        ),
+                      ),
+                    ]),
               ),
             ],
           ),
